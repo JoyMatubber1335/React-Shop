@@ -1,0 +1,18 @@
+.cart-item-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.total-price {
+  margin-top: 1rem;
+  border-top: 2px solid black;
+  text-align: right;
+  padding: 1rem;
+}
+
+.cart-item {
+  border-bottom: 1px solid black;
+  padding: 1rem 0;
+}

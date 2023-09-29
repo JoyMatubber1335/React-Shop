@@ -1,0 +1,45 @@
+.HeaderHome {
+  background-color: #459a4e;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  margin: 0 4rem;
+}
+
+.logo img {
+  height: 100px;
+  width: 100px;
+}
+
+.navitem a {
+  text-decoration: none;
+  color: wheat;
+}
+
+.search-box input {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.header .logo {
+  width: 25%;
+}
+.header .navitem {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-right: 2rem;
+}
+.navitem a {
+  padding: 0 0.5rem;
+}
+.header .search-box {
+  width: 25%;
+}
