@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { productData } from "./Data.js";
 import { AddtoCard } from "./AddtoCard.js";
@@ -27,12 +27,18 @@ export const FeaturedProduct = () => {
     setCartOpen(false);
   };
 
-  const filteredProducts = stock ? productData.filter((product) => product.stock) : productData;
+  const filteredProducts = stock
+    ? productData.filter((product) => product.stock)
+    : productData;
 
   return (
     <div>
       <div className="product__filter">
-        <input type="checkbox" checked={stock} onChange={(e) => onInStockOnlyChange(e.target.checked)} />
+        <input
+          type="checkbox"
+          checked={stock}
+          onChange={(e) => onInStockOnlyChange(e.target.checked)}
+        />
         Show in stock products
       </div>
       <div className="product__container">
@@ -60,7 +66,9 @@ export const FeaturedProduct = () => {
         })}
       </div>
 
-      {cartOpen && <AddtoCard cartItem={card} closeCard={closeCard} setCart={setCart} />}
+      {cartOpen && (
+        <AddtoCard cartItem={card} closeCard={closeCard} setCart={setCart} />
+      )}
     </div>
   );
 };

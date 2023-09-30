@@ -24,12 +24,25 @@
 
 // export default App;
 
-import { Home } from "./Home.js/Home";
+import { Home } from "./Home/Home.js";
+import { AboutUs } from "./AboutUs/AboutUs";
+import { FeaturedProduct } from "./Product/FeaturedProduct.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Category } from "./Category/Category.js";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Home /> */}
+
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/product" element={<FeaturedProduct />} />
+          <Route exact path="/about" element={<AboutUs />} />
+          <Route exact path="/Category/:category" element={<Category />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
